@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cheeseymelo — Homemade Cheesecake</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a class="logo" href="#home">
+          <img
+            src="image/logo brand.png"
+            alt="Logo Cheeseymelo"
+            class="logo-icon"
+          />
+          <span class="logo-text"><span>Cheesey</span>melo</span>
+        </a>
+
+        <nav id="navMenu">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-btn" onclick="openCart()">
+          🛒 <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="small-title">HANDMADE WITH LOVE</p>
+          <h1>
+            Manisnya Pas
+            <span>Lembutnya Bikin Lepas.</span>
+          </h1>
+          <p class="hero-description">
+            Cheesecake premium dengan tekstur lembut dan rasa manis yang pas,
+            dibuat dari bahan-bahan berkualitas untuk menghadirkan rasa yang
+            istimewa di setiap gigitan. Nikmati kelembutan cheesecake yang lumer
+            di mulut, berpadu dengan cita rasa manis yang seimbang dan bikin
+            ingin menikmatinya lagi dan lagi.
+          </p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn-primary"> Explore Menu </a>
+            <a href="#about" class="btn-secondary"> Our Story → </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="circle-bg"></div>
+
+          <div class="cake-card">
+            <div class="cake-image">
+              <img src="image/cake 1.jpeg" alt="Classic Cheesecake" />
+            </div>
+
+            <div class="cake-label">
+              <span>BEST SELLER</span>
+              <strong>Strawberry Cheesecake</strong>
+            </div>
+          </div>
+
+          <div class="floating-note">✦ Freshly baked</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section class="features">
+      <div class="container feature-grid">
+        <div class="feature">
+          <div class="feature-icon"></div>
+          <div>
+            <h3>Premium Ingredients</h3>
+            <p>Dibuat dengan bahan berkualitas.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon"></div>
+          <div>
+            <h3>Made With Love</h3>
+            <p>Setiap cheesecake dibuat fresh.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon"></div>
+          <div>
+            <h3>Ready to Deliver</h3>
+            <p>Siap menemani hari spesialmu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="small-title">OUR FAVORITES</p>
+
+            <h2>
+              Sweetness in
+              <span>Every Slice.</span>
+            </h2>
+          </div>
+
+          <p>
+            Pilihan cheesecake favorit Cheeseymelo yang cocok untuk berbagai
+            suasana.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <!-- PRODUCT 1 -->
+          <div class="product-card">
+            <div class="product-image chocolate">
+              <img src="image/cake 2.jpeg" alt="Oreo Cheesecake" />
+            </div>
+            <div class="product-info">
+              <span class="tag">BEST SELLER</span>
+              <h3>Oreo Cheesecake</h3>
+              <p>
+                Cheesecake creamy dengan taburan dan rasa khas biskuit Oreo.
+              </p>
+              <div class="product-bottom">
+                <strong>Rp38.000</strong>
+                <button onclick="addToCart('Oreo Cheesecake', 38000)">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 2 -->
+          <div class="product-card">
+            <div class="product-image original">
+              <img src="image/cake 3.jpeg" alt="Classic Cheesecake" />
+            </div>
+            <div class="product-info">
+              <span class="tag">CLASSIC</span>
+              <h3>Chocolate Cheesecake</h3>
+              <p>
+                Cheesecake lembut dengan rasa cokelat yang manis dan creamy.
+              </p>
+
+              <div class="product-bottom">
+                <strong>Rp35.000</strong>
+                <button onclick="addToCart('Chocolate Cheesecake', 35000)">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT 3 -->
+          <div class="product-card">
+            <div class="product-image caramel">
+              <img src="image/cake 4.jpeg" alt="Blueberry Cheesecake" />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">FAVORITE</span>
+
+              <h3>Blueberry Cheesecake</h3>
+
+              <p>
+                Creamy cheesecake dengan saus blueberry yang manis dan buttery.
+              </p>
+              <div class="product-bottom">
+                <strong>Rp35.000</strong>
+                <button onclick="addToCart('Blueberry Cheesecake', 35000)">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- PRODUCT 4 -->
+          <div class="product-card">
+            <div class="product-image berry">
+              <img src="image/cake 5.jpeg" alt="Strawberry Cheesecake" />
+            </div>
+            <div class="product-info">
+              <span class="tag">FRESH</span>
+              <h3>Classic Cheesecake</h3>
+              <p>
+                Cheesecake klasik dengan tekstur lembut, creamy, dan rasa keju
+                yang khas.
+              </p>
+              <div class="product-bottom">
+                <strong>Rp30.000</strong>
+                <button onclick="addToCart('Classic Cheesecake', 30000)">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT: Strawberry Cheesecake -->
+          <div class="product-card">
+            <div class="product-image berry">
+              <img src="image/cake 1.jpeg" alt="Strawberry Cheesecake" />
+            </div>
+            <div class="product-info">
+              <span class="tag">FRESH</span>
+              <h3>Strawberry Cheesecake</h3>
+              <p>
+                Cheesecake creamy dengan sentuhan strawberry yang manis dan
+                sedikit segar.
+              </p>
+              <div class="product-bottom">
+                <strong>Rp35.000</strong>
+                <button onclick="addToCart('Strawberry Cheesecake', 35000)">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT: Biscoff Cheesecake -->
+          <div class="product-card">
+            <div class="product-image caramel">
+              <img src="image/cake 6.jpeg" alt="Biscoff Cheesecake" />
+            </div>
+            <div class="product-info">
+              <span class="tag">NEW</span>
+              <h3>Biscoff Cheesecake</h3>
+              <p>
+                Cheesecake creamy dengan cita rasa khas Biscoff yang manis dan
+                caramel-like.
+              </p>
+              <div class="product-bottom">
+                <strong>Rp38.000</strong>
+                <button onclick="addToCart('Biscoff Cheesecake', 38000)">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT: Cookies and Cream Cheesecake -->
+          <div class="product-card">
+            <div class="product-image original">
+              <img src="image/cake 8.jpeg" alt="Cookies and Cream Cheesecake" />
+            </div>
+            <div class="product-info">
+              <span class="tag">NEW</span>
+              <h3>Cookies and Cream Cheesecake</h3>
+              <p>
+                Cheesecake creamy dengan perpaduan renyah dan manis dari
+                cookies.
+              </p>
+              <div class="product-bottom">
+                <strong>Rp38.000</strong>
+                <button
+                  onclick="addToCart('Cookies and Cream Cheesecake', 38000)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCT: Red Velvet Cheesecake -->
+          <div class="product-card">
+            <div class="product-image chocolate">
+              <img src="image/cake 7.jpeg" alt="Red Velvet Cheesecake" />
+            </div>
+            <div class="product-info">
+              <span class="tag">FAVORITE</span>
+              <h3>Red Velvet Cheesecake</h3>
+              <p>
+                Perpaduan red velvet yang lembut dengan cheesecake creamy dan
+                manis.
+              </p>
+              <div class="product-bottom">
+                <strong>Rp38.000</strong>
+                <button onclick="addToCart('Red Velvet Cheesecake', 38000)">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container about-container">
+        <div class="about-image">
+          <img src="image/cake 5.jpeg" alt="Original Cheesecake" />
+          <div class="about-card">
+            <span>CHEESEYMELO</span>
+            <strong>Since 2026</strong>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p class="small-title">OUR STORY</p>
+
+          <h2>
+            Made for the
+            <span>sweet moments.</span>
+          </h2>
+
+          <p>
+            Cheeseymelo hadir dari kecintaan sederhana terhadap cheesecake yang
+            lembut, creamy, dan comforting.
+          </p>
+
+          <p>
+            Kami percaya bahwa makanan manis bukan hanya soal rasa, tetapi juga
+            tentang menciptakan momen kecil yang membuat hari terasa lebih
+            menyenangkan.
+          </p>
+
+          <a href="#contact" class="text-link"> Get to know us → </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <p class="small-title">YOUR NEXT FAVORITE</p>
+
+        <h2>
+          Treat yourself to
+          <span>something sweet.</span>
+        </h2>
+
+        <p>
+          Karena setiap hari selalu punya alasan untuk menikmati cheesecake.
+        </p>
+
+        <a href="#menu" class="btn-primary"> Order Now </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="container contact-container">
+        <div>
+          <p class="small-title">LET'S CONNECT</p>
+
+          <h2>
+            Have a sweet
+            <span>question?</span>
+          </h2>
+
+          <p>
+            Hubungi Cheeseymelo untuk pemesanan, custom cake, atau pertanyaan
+            lainnya.
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <a href="#">
+            WhatsApp
+            <span>085-881-266-610</span>
+          </a>
+
+          <a href="#">
+            Instagram
+            <span>@cheeseymelo</span>
+          </a>
+
+          <a href="#">
+            Email
+            <span>hello@cheeseymelo.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-container">
+        <div class="logo"><span>Cheesey</span>melo</div>
+
+        <p>© 2026 Cheeseymelo. Made with ♡</p>
+      </div>
+    </footer>
+
+    <!-- CART MODAL -->
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-box">
+        <button class="close-cart" onclick="closeCart()">×</button>
+
+        <p class="small-title">YOUR ORDER</p>
+
+        <h2>Your Cart</h2>
+
+        <div id="cartItems">
+          <p class="empty-cart">Keranjang masih kosong.</p>
+        </div>
+
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">Rp0</strong>
+        </div>
+
+        <button class="checkout-btn" onclick="checkout()">
+          Checkout via WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
